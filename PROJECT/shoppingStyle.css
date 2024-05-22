@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(249, 220, 102);
+}
+
+h1 {
+    text-align: center;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Source for li button: https://www.youtube.com/watch?v=VdDMHr56bcw - I changed the amount of pixels for margin-left and
+font-size */
+/* Styling for delete button that appears next to individual items after item is added to list */
+li button {
+    margin-left: 15px;
+    color: red;
+    font-size: 18px;
+}
+
+.sections {
+    display: flex;
+}
+
+/* Source: https://www.youtube.com/watch?v=tZ45HZAkbLc - I changed the background colour and the amount of pixels for margin
+and min-height. */
+/* Styling for each section where user can enter items */
+.sections .shop {
+    display: flex;
+    margin: 0 10px;
+    flex-flow: column;
+    flex: 1;
+    padding: 8px;
+    width: 100%;
+    height: 100%;
+    min-height: 125px;
+    background-color: rgb(246, 196, 17);
+    font-size: 20px;
+}
+
+/* Source: https://www.youtube.com/watch?v=tZ45HZAkbLc - I changed the amount of pixels for border-radius. */
+/* Styling for drag and drop list of shops */
+.shop_name {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px 25px;
+    text-align: center;
+    margin: 5px 0px;
+}
+
+/* Source: https://www.youtube.com/watch?v=tZ45HZAkbLc - I changed the background colour and the amount of pixels for margin. */
+/* Styling for "Key Items" section */
+.sections .key_items_section {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    margin: 0 10px;
+    padding: 8px;
+    background-color: rgb(255, 153, 0);
+    font-size: 20px;
+}
+
+/* Some code from: https://www.youtube.com/watch?v=jXTfoKkPtYY - I changed the background colour, colour of text on button and
+added a font-size property. */
+/* Styling for information button */
+.i_button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    text-align: left;
+    font-size: 1.4em;
+    transition: background-color 0.2s;
+}
+
+/* Source: https://www.youtube.com/watch?v=jXTfoKkPtYY - I changed the size of the triangle by changing the factor it is scaled
+by. */
+/* This styling adds a downward triangle to the far right of the information button  */
+.i_button::after {
+    content: '\25be';
+    float: right;
+    transform: scale(1.8);
+}
+
+/* Changes background colour of button and text when information button is pressed */
+.i_button--active {
+    background-color: antiquewhite;
+}
+
+/* Adds an upward triangle, with same styling as in ".i_button::after" code block, when information button is clicked */
+.i_button--active::after {
+    content: '\25b4';
+}
+
+/* Source: https://www.youtube.com/watch?v=jXTfoKkPtYY - I changed the background colour and added font-size and line-height
+properties. */
+/* Styling for the text that appears when information button is clicked */
+.instructions {
+    padding: 0 15px;
+    background-color: blanchedalmond;
+    display: none;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+/* Allows the text to appear when the information button is clicked */
+.i_button--active + .instructions {
+    display: block;
+}

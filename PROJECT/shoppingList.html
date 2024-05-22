@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping List</title>
+        <link href="shoppingStyle.css" rel="stylesheet">
+        <script src="shoppingScript.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Shopping List</h1>
+        </header>
+        <div class="sections">
+            <!-- First section allows the user to drag and drop their selected shop into any of the other sections, except 
+                for the "Key Items" section. -->
+            <div class="shop">
+                <!-- Source: https://www.youtube.com/watch?v=jXTfoKkPtYY - I changed the class names for the div, button and 
+                paragraph elements. I also did not include a second div element after the button element. The text inside the
+                button and paragraph elements are different as well. -->
+                <div class="info">
+                    <!-- Some code from: https://www.youtube.com/watch?v=6FimFPLjX5c - the only thing I used from this video is 
+                    the text inside the button element. -->
+
+                    <!-- Creating instructions button with the text that pops up when button is pressed -->
+                    <button type="button" class="i_button">&#8505</button>
+                    <p class="instructions">
+                        Drag the shop you are planning on going to and drop it into any of the other sections, except for the 
+                        "Key Items" section.
+                    </p>
+                </div>
+
+                <!-- List of shops that the user can drag and drop -->
+                <h3>Shops to go to</h3>
+                <!-- Source: https://www.youtube.com/watch?v=tZ45HZAkbLc&t=1071s - I changed the class names for the div
+                elements and the text inside the div elements. -->
+                <div class="shop_name" draggable="true">Tesco</div>
+                <div class="shop_name" draggable="true">Waitrose</div>
+                <div class="shop_name" draggable="true">Morrisons</div>
+                <div class="shop_name" draggable="true">M&S</div>
+                <div class="shop_name" draggable="true">Aldi</div>
+                <div class="shop_name" draggable="true">Lidl</div>
+                <div class="shop_name" draggable="true">Sainsbury's</div>
+                <div class="shop_name" draggable="true">Iceland</div>
+                <div class="shop_name" draggable="true">Asda</div>
+            </div>
+
+            <!-- Source: https://www.youtube.com/watch?v=VdDMHr56bcw - I changed the names for the various attributes for the 
+            div, label, input, button and list elements. I also changed the text inside the label and button elements. -->
+
+            <!-- The next four sections are where the user can enter and add an item they want to buy to the list in that section.
+            Users can also delete all items added to that section. -->
+            <div class="shop">
+                <label for="section_1">Enter groceries to purchase:</label>
+                <input type="text" name="section_1" id="section_1">
+                <button class="btn_1">Add to list</button>
+                <ul class="list_1">
+
+                </ul>
+            </div>
+
+            <div class="shop">
+                <label for="section_2">Enter groceries to purchase:</label>
+                <input type="text" name="section_2" id="section_2">
+                <button class="btn_2">Add to list</button>
+                <ul class="list_2">
+
+                </ul>
+            </div>
+
+            <div class="shop">
+                <label for="section_3">Enter groceries to purchase:</label>
+                <input type="text" name="section_3" id="section_3">
+                <button class="btn_3">Add to list</button>
+                <ul class="list_3">
+
+                </ul>
+            </div>
+
+            <div class="shop">
+                <label for="section_4">Enter groceries to purchase:</label>
+                <input type="text" name="section_4" id="section_4">
+                <button class="btn_4">Add to list</button>
+                <ul class="list_4">
+
+                </ul>
+            </div>
+
+            <!-- The last section allows users to enter and add staple items that are needed weekly -->
+            <div class="key_items_section">
+                <!-- Source: https://www.youtube.com/watch?v=jXTfoKkPtYY - I changed the class names for the div, button and 
+                paragraph elements. I also did not include a second div element after the button element. The text inside the
+                button and paragraph elements are different as well. -->
+                <div class="info">
+                    <!-- Some code from: https://www.youtube.com/watch?v=6FimFPLjX5c - the only thing I used from this video is 
+                    the text inside the button element. -->
+
+                    <!-- Creating instructions button with the text that pops up when button is pressed -->
+                    <button type="button" class="i_button">&#8505</button>
+                    <p class="instructions">
+                        This is where you can enter items that you always buy weekly. These items will not be deleted.
+                    </p>
+                </div>
+                
+                <!-- Source: https://www.youtube.com/watch?v=VdDMHr56bcw - I changed the names for the various attributes for the 
+                label, input, button and list elements. I also changed the text inside the label and button elements. -->
+
+                <!-- Entering and adding items to the list -->
+                <h3>Key Items:</h3>
+                <label for="key_item">Enter groceries to purchase:</label>
+                <input type="text" name="key_item" id="key_item">
+                <button class="btn_key">Add to list</button>
+                <ul class="key_list">
+    
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

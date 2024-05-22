@@ -1,0 +1,65 @@
+body {
+    background: linear-gradient(to bottom, #0132DF 0%, #0132DF 35%, white 35%, white 100%);
+    background-repeat: no-repeat;
+}
+
+#text_size_container, .heading {
+    margin: 0;
+    color: white;
+}
+
+#text_size_container {
+    margin-left: 83%;
+}
+
+.text_size {
+    display: inline-block;
+    vertical-align: middle;
+    /*margin: 10px 0;*/
+}
+
+.heading {
+    text-align: center;
+}
+
+#images_container .images{
+    width: 500px;
+    height: 300px;
+}
+
+#images_container {
+    display: grid;                      /* Set display to grid so that images show up as a grid */
+    grid-template-columns: 1fr 1fr;     /* Creating space for columns. "1fr" two times creates two columns with equal space */
+    column-gap: 5px;                    /* Setting gap between columns to 5px */
+    margin-left: 10%;
+    margin-top: 7%;
+}
+
+#buttons_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    margin-top: 0.5%;
+}
+
+.button1 {
+    margin-left: 20%;
+    background-color: #0132DF;
+    color: white;
+    border: none;
+    padding: 30px;
+    padding-left: 85px;
+    padding-right: 85px;
+    font-size: 20px;
+}
+
+.button2 {
+    margin-left: 10%;
+    background-color: #0132DF;
+    color: white;
+    border: none;
+    padding: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+}

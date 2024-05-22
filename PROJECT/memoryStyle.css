@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Making all elements show in the centre of screen and setting background colour */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e9967a;
+}
+
+/* Styling to position heading and instructions button at top of page */
+h1, .instruct_button {
+    position: fixed;
+    top: 0;
+}
+
+/* Source: https://www.youtube.com/watch?v=jXTfoKkPtYY - I changed the width, padding, background colour, colour of text on 
+button and added font-size and other properties. */
+/* Styling for instructions button */
+.instruct_button {
+    right: 0;
+    display: block;
+    width: 20%;
+    padding: 13px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: blanchedalmond;
+    color: black;
+    text-align: left;
+    font-size: 1.3em;
+    transition: background-color 0.2s;
+}
+
+/* Source: https://www.youtube.com/watch?v=jXTfoKkPtYY - I changed the size of the triangle by changing the factor it is scaled
+by. */
+/* Styling adds a downward triangle to the far right of the information button  */
+.instruct_button::after {
+    content: '\25be';
+    float: right;
+    transform: scale(1.8);
+}
+
+/* Changes background colour of button and text when information button is pressed */
+.instruct_button--active {
+    background-color: white;
+}
+
+/* Adds an upward triangle, with same styling as in ".i_button::after" code block, when information button is clicked */
+.instruct_button--active::after {
+    content: '\25b4';
+}
+
+/* Source: https://www.youtube.com/watch?v=jXTfoKkPtYY - I changed the background colour and added font-size, line-height and
+other properties. */
+/* Styling for the text that appears when information button is clicked */
+.instructions {
+    padding: 0 15px;
+    background-color: white;
+    display: none;
+    font-size: 1.2em;
+    line-height: 1.4;
+    right: 0;
+    position: fixed;
+    top: 55px;
+}
+
+/* Allows the text to appear when the information button is clicked */
+.instruct_button--active + .instructions {
+    display: block;
+}
+
+/* When instruction button is open, the deck of cards moves down to accommodate the instruction button text */
+.instruct_button_open .container {
+    transform: translateY(170px);
+}
+
+/* Source: https://www.youtube.com/watch?v=DABkhfsBAWw - I changed the names of the classes called and the colours */
+/* Styling for box around cards */
+.container {
+    height: 500px;
+    width: 500px;
+    background-color: rgb(255, 242, 224);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+/* Styling for all cards and images on front and back of cards */
+.all_cards, .individual_card, .front, .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* General styling for all cards */
+.all_cards {
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styling for each individual card, which calculates height and width of cards and allows them to be flipped over */
+.all_cards .individual_card {
+    height: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 10px);
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+/* Adds shake annimation to the cards */
+.individual_card.shake {
+    animation: shake 0.35s ease-in-out;
+}
+
+/* Makes cards shake gradually from left to right. 0% is beginning of animation, 100% is when animation is complete. */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-13px);
+    }
+    40% {
+        transform: translateX(13px);
+    }
+    60% {
+        transform: translateX(-8px);
+    }
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+/* Styling for front and back of individual cards */
+.all_cards .individual_card .front, .back {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 9px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 0.25s linear;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Styling question mark icon on front of card */
+.individual_card .front span {
+    color: #ff6347;
+    font-size: 60px;
+}
+
+/* Styling to allow card to be rotated to reveal the image on the back of the card */
+.individual_card .back {
+    transform: rotateY(-180deg);
+}
+
+/* Styling image on the back of the card to increase its size */
+.individual_card .back img {
+    max-width: 90px;
+}
+
+/* Styling to rotate the front of the card, which will show the back of the card, when the flip class is added to the cards */
+.individual_card.flip .front {
+    transform: rotateY(180deg);
+}
+
+/* Styling to rotate the back of the card, which will show the front of the card, when the flip class is added to the cards */
+.individual_card.flip .back {
+    transform: rotateY(0)
+}

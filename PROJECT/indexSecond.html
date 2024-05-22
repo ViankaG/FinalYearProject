@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A Guide To Dementia</title>
+        <link href="styleIndexSecond.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="text_size_container">
+            <p class="text_size">Font Size:</p>
+            <button class="text_size" type="button" onclick="smallFontSize()">Small</button>
+            <button class="text_size" type="button" onclick="mediumFontSize()">Medium</button>
+            <button class="text_size" type="button" onclick="largeFontSize()">Large</button>
+        </div>
+
+        <div id="all_text">
+            <h1 class="heading">A Guide To Dementia</h1>
+            <p class="heading">
+                This is the home page for this website. This website is made up of two pages. The blue button on the left titled 
+                "Information About Types of Dementia" will take you to the first page, which includes information on 
+                different types of dementia. The blue button on the right titled "Stories and Advice From People Living With 
+                Dementia" will take you to the second page, which includes stories and advice from people living with 
+                dementia. 
+            </p>
+            
+            <div id="images_container">
+                <div>
+                    <img class="images" src="dementiaPic.jpg" alt="Person caring for a person living with dementia">
+                </div>
+                <div>
+                    <img class="images" src="groupOfOldPeople.jpg" alt="Person caring for a person living with dementia">
+                </div>
+            </div>
+            
+            <div id="buttons_container">
+                <div>
+                    <button class="button1" type="button">Information About Types of Dementia</button>
+                </div>
+                <div>
+                    <button class="button2" type="button">Stories and Advice From People Living With Dementia</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function largeFontSize() {
+            document.getElementById('all_text').style.fontSize = "25px";
+        }
+
+        function mediumFontSize() {
+            document.getElementById('all_text').style.fontSize = "20px";
+        }
+
+        function smallFontSize() {
+            document.getElementById('all_text').style.fontSize = "16px";
+        }
+    </script>
+</html>

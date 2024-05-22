@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memory Match</title>
+        <link href="memoryStyle.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="memoryScript.js" defer></script>
+    </head>
+    
+    <body>
+        <h1>Memory Match Game</h1>
+        <!-- Source: https://www.youtube.com/watch?v=jXTfoKkPtYY - I changed all class names and text inside button and 
+            paragraph elements. -->
+        <!-- Expands text in paragraph element when "Instructions For Game" button is clicked -->
+        <div class="info">
+            <!-- Calling openInstruct() function when instructions button is clicked -->
+            <button type="button" class="instruct_button" onclick="openInstruct()">Instructions For Game</button>
+            <p class="instructions">
+                Aim of the game:<br> 
+                To match all the cards in the deck with their pairs.<br>
+                Instructions<br>
+                1. Click on two cards from the deck below<br>
+                2. If the images on the cards are the same, this means they are matched and will not flip back over. If the
+                   images on the cards are not the same, then both cards will shake to indicate that they have not been
+                   matched and they will flip back over.<br>
+                3. Keep clicking on two cards at a time until all cards are matched with their pairs<br>
+                4. The game will end when all pairs of cards have been matched. All cards will flip over, the cards will be 
+                   shuffled and the game will begin again.
+            </p>
+        </div>
+
+        <!-- Source: https://www.youtube.com/watch?v=DABkhfsBAWw - I changed all attribute names -->
+        <!-- Creates cards with a question mark icon for the front and an image from the folder MemoryMatchImages for the back -->
+        <div class="container">
+            <ul class="all_cards">
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-1.png" alt="img_card">
+                    </div>
+                </li>
+                
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-2.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-3.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-4.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-5.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-6.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-7.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-8.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-1.png" alt="img_card">
+                    </div>
+                </li>
+                
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-2.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-3.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-4.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-5.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-6.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-7.png" alt="img_card">
+                    </div>
+                </li>
+
+                <li class="individual_card">
+                    <div class="front">
+                        <span class="material-icons">question_mark</span>
+                    </div>
+                    <div class="back">
+                        <img src="MemoryMatchImages/img-8.png" alt="img_card">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
